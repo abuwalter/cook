@@ -92,7 +92,7 @@
         <h1>Abu Walter</h1>
         <h2>Ca placeholder</h2>
       </div>
-      <video id="vid" autoplay muted loop>
+      <video id="vid" autoplay defaultMuted muted loop>
         <source src="src/bbvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -103,6 +103,7 @@
           video.addEventListener("playing", function () {
             // Once video starts playing, unmute it
             video.muted = false;
+            video.defaultMuted = false;
           });
 
           video.play().catch(function (error) {
