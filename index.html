@@ -87,10 +87,13 @@
             <h1>Abu Walter</h1>
             <h2>Ca placeholder</h2>
         </div>
-        <video id="bgVideo" autoplay loop>
+        <video id="vid" autoplay loop>
             <source src="src/bbvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <script>
+            document.getElementById('vid').play();
+        </script>
         <div class="social-icons">
             <a href="https://x.com/Abuwaltersol"><i class="fab fa-twitter"></i></a>
             <a href="https://t.me/AbuWalterSol"><i class="fab fa-telegram"></i></a>
@@ -101,7 +104,7 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var video = document.getElementById('bgVideo');
+            var video = document.getElementById('vid');
             video.play().catch(function(error) {
                 console.log("Autoplay was prevented, attempting to play video again with user interaction.");
                 document.body.addEventListener('click', function() {
